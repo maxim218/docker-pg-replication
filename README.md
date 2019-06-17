@@ -46,3 +46,34 @@ pg_dump base -p 5432 >> /exported_data/replicationOfBase.sql
 psql postgres
 ```
 
+## Восстановление базы данных из файла
+
+Подключаемся к СУБД.
+
+Работаем уже НЕ в контейнере.
+
+```
+psql postgres
+```
+
+Создаем базу данных.
+
+```
+CREATE DATABASE bbbbbb;
+```
+
+Отключаемся от СУБД.
+
+```
+\q
+```
+
+Восстанавливаем из файла базу данных.
+
+```
+psql -d 'bbbbbb' -f '/Users/maxim/Desktop/aaa/replicationOfBase.sql'
+```
+
+Теперь в базе данных на копьютере хранится копия базы данных из контейнера.
+
+
