@@ -40,3 +40,9 @@ su - postgres
 pg_dump base -p 5432 >> /exported_data/replicationOfBase.sql
 ```
 
+При необходимости можно начать работать с базами данных в контейнере.
+
+```
+psql postgres
+```
+
