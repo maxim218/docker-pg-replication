@@ -14,3 +14,15 @@ docker-compose build && docker-compose up
 /Users/maxim/Desktop/aaa
 ```
 
+Смотрим запущенные контейнеры
+
+```
+docker ps
+```
+
+Подключаемся к контейнеру с возможностью ввода команд
+
+```
+docker exec -i -t eec60636a5a0 bash
+```
+
