@@ -15,7 +15,11 @@ EXPOSE 5432
 VOLUME  ["/etc/postgresql", "/var/log/postgresql", "/var/lib/postgresql"]
 
 USER root
-RUN apt-get install -y nodejs nodejs-legacy npm
+
+RUN apt-get -y update
+RUN apt-get -y install nodejs
+RUN apt-get -y install npm
+RUN apt -y install nodejs-legacy
 
 ENV APP /root/app
 ADD ./ $APP
