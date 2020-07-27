@@ -76,4 +76,11 @@ psql -d 'bbbbbb' -f '/Users/maxim/Desktop/aaa/replicationOfBase.sql'
 
 Теперь в базе данных на копьютере хранится копия базы данных из контейнера.
 
+## Запускаем команды из файла
+
+Запустим на выполнение файл myfile
+
+```
+psql \i  '/home/maxim/Рабочий стол/myfile'
+```
 
